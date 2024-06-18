@@ -101,3 +101,61 @@ body {
     margin-bottom: 5px;
 }
 
+
+
+
+
+
+#index {
+    text-align: left;
+}
+
+#index h2 {
+    font-size: 24px;
+    font-weight: bold;
+	margin-top: 50px;
+}
+
+#index ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#index ul li {
+    margin-bottom: 10px;
+}
+
+#index ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+#index ul li a:hover {
+    color: #007bff;
+}
+
+.index-container {
+	margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#page-2 {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+
