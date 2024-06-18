@@ -1,14 +1,13 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Centered Book with turn.js - Manual Pages</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-     <!-- Import Montserrat font from Google Fonts -->
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="turn.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8">
+<title>M.C. Wolmarans</title>
+<script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<script src="turn.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
@@ -21,29 +20,26 @@
     </div>
     <div class="page odd content-pages index-page" id="index">
         <div class="data">
-
             <div class="index-container">
                 <h2>Index</h2>
                 <ul>
                     <li><a href="#" onclick="navigateTo('prologue')">Prologue - About Me</a></li>
-                    <ul>
-                        <li><a href="#" onclick="navigateTo('introduction')">Introduction about yourself</a></li>
-                        <li><a href="#" onclick="navigateTo('story')">Personal story or career journey</a></li>
-                        <li><a href="#" onclick="navigateTo('milestones')">Key milestones or experiences</a></li>
-                        <li><a href="#" onclick="navigateTo('timeline')">Brief timeline or highlights</a></li>
-                    </ul>
-                    <li><a href="#" onclick="navigateTo('chapters')">Chapters - Projects</a></li>
-                    <ul>
-                        <li><a href="#" onclick="navigateTo('chapter1')">Chapter 1: Project Title</a></li>
-                        <li><a href="#" onclick="navigateTo('chapter2')">Chapter 2: Project Title</a></li>
-                        <!-- Add more chapters as needed -->
-                    </ul>
+                    <li><a href="#" class="index-link" data-section="introduction">Introduction about yourself</a></li>
+                    <li><a href="#" class="index-link" data-section="story">Personal story or career journey</a></li>
+                    <li><a href="#" class="index-link" data-section="milestones">Key milestones or experiences</a></li>
+                    <li><a href="#" class="index-link" data-section="timeline">Brief timeline or highlights</a></li>
+                    <li><a href="#" onclick="navigateTo('chapters')">Chapters - Projects</a>
+                        <ul>
+                            <li><a href="#" onclick="navigateTo('chapter1')">Chapter 1: Project Title</a></li>
+                            <li><a href="#" onclick="navigateTo('chapter2')">Chapter 2: Project Title</a></li>
+                            <!-- Add more chapters as needed -->
+                        </ul>
+                    </li>
                     <li><a href="#" onclick="navigateTo('appendix')">Appendix - Skills</a></li>
                     <li><a href="#" onclick="navigateTo('epilogue')">Epilogue - Contact</a></li>
                 </ul>
             </div>
-
-               </div>
+        </div>
     </div>
     
     <div class="page even content-pages" id="page-2">
@@ -58,7 +54,6 @@
             <p><strong>Personal Story and Career Journey:</strong> From a young age, I’ve been fascinated by how technology shapes our world. My journey into software engineering started with curiosity-driven exploration and a desire to create meaningful solutions. Studying at Belgium Campus has provided me with a robust foundation in computer science and software development, igniting my enthusiasm to contribute to the tech industry.</p>
             
             <p><strong>Key Milestones and Experiences:</strong> Throughout my academic journey, I’ve embraced hands-on learning experiences and collaborated on various projects that have deepened my understanding of software engineering principles.</p>
-     
         </div>
     </div>
     <div class="page even content-pages" id="page-4">
@@ -76,8 +71,7 @@
 </div>
 
 <script type="text/javascript">
-
-$(window).ready(function () {
+$(document).ready(function () {
     $('#book').turn({
         acceleration: true,
         pages: 4, // Total number of pages
@@ -96,13 +90,55 @@ $(window).ready(function () {
 
     // Initialize book state
     $('#book').addClass('closed');
+
+    // Function to navigate to a section/page
+    function navigateTo(sectionId) {
+        switch (sectionId) {
+            case 'prologue':
+                $('#book').turn('page', 2); // Prologue page
+                break;
+            case 'introduction':
+                $('#book').turn('page', 4); // Introduction page
+                break;
+            case 'story':
+                $('#book').turn('page', 3); // Personal story page
+                break;
+            case 'milestones':
+                $('#book').turn('page', 3); // Key milestones page
+                break;
+            case 'timeline':
+                $('#book').turn('page', 4); // Timeline page
+                break;
+            case 'chapters':
+                $('#book').turn('page', 5); // Chapters page (adjust the page number accordingly)
+                break;
+            case 'chapter1':
+                $('#book').turn('page', 6); // Chapter 1 page (adjust the page number accordingly)
+                break;
+            case 'chapter2':
+                $('#book').turn('page', 7); // Chapter 2 page (adjust the page number accordingly)
+                break;
+            case 'appendix':
+                $('#book').turn('page', 8); // Appendix page (adjust the page number accordingly)
+                break;
+            case 'epilogue':
+                $('#book').turn('page', 9); // Epilogue page (adjust the page number accordingly)
+                break;
+            default:
+                break;
+        }
+
+        // Close the book after navigating to a section/page
+        $('#book').addClass('closed');
+    }
+
+    // Event handler for index links
+    $('.index-link').on('click', function(event) {
+        event.preventDefault();
+        var sectionId = $(this).data('section');
+        navigateTo(sectionId);
+    });
 });
-
-function navigateTo(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
-
-
 </script>
 
 </body>
