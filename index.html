@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Centered Book with turn.js - Manual Pages</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+     <!-- Import Montserrat font from Google Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="turn.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="book">
+    <div class="cover">
+        <h1>Digital Chronicles: <br>Crafting My Path <br>in Software Development</h1>
+        <p>Programmed by M.C. Wolmarans</p>
+    </div>
+    <div class="page odd content-pages" id="page-1">
+        <div class="data">
+            <h2>Prologue - About Me</h2>
+            <p><strong>Introduction:</strong> Hello! I’m Martinus Christoffel Wolmarans. Currently in my second year at Belgium Campus, pursuing a Bachelor of Computing with a specialization in Software Engineering. Originally from Pretoria, South Africa, my journey in technology began with a passion for problem-solving and innovation.</p>
+            
+            <p><strong>Personal Story and Career Journey:</strong> From a young age, I’ve been fascinated by how technology shapes our world. My journey into software engineering started with curiosity-driven exploration and a desire to create meaningful solutions. Studying at Belgium Campus has provided me with a robust foundation in computer science and software development, igniting my enthusiasm to contribute to the tech industry.</p>
+            
+            <p><strong>Key Milestones and Experiences:</strong> Throughout my academic journey, I’ve embraced hands-on learning experiences and collaborated on various projects that have deepened my understanding of software engineering principles.</p>
+        </div>
+    </div>
+    
+    <div class="page even content-pages" id="page-2">
+        <div class="data">
+            <p>These experiences have not only honed my technical skills but also instilled in me a commitment to continuous learning and growth.</p>
+            
+            <p><strong>Brief Timeline or Highlights:</strong></p>
+            <ul>
+                <li><strong>Early Years:</strong> Introduced to programming languages and computer systems, sparking my interest in technology.</li>
+                <li><strong>Education:</strong> Currently advancing my skills in software engineering at Belgium Campus, acquiring knowledge in areas such as programming languages, algorithms, and software design.</li>
+                <li><strong>Projects and Collaborations:</strong> Engaged in diverse projects that have allowed me to apply theoretical knowledge to practical solutions, preparing me for real-world challenges in the field.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="page odd" id="page-3">
+        <div class="data">Data for page 3</div>
+    </div>
+    <div class="page even" id="page-4">
+        <div class="data">Data for page 4</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+$(window).ready(function () {
+    $('#book').turn({
+        acceleration: true,
+        pages: 4, // Total number of pages
+        elevation: 50,
+        gradients: !$.isTouch,
+        when: {
+            turning: function(event, page, view) {
+                if (page === 1) {
+                    $('#book').removeClass('open').addClass('closed');
+                } else {
+                    $('#book').removeClass('closed').addClass('open');
+                }
+            }
+        }
+    });
+
+    // Initialize book state
+    $('#book').addClass('closed');
+});
+
+function navigateTo(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
+
+
+</script>
+
+</body>
+</html>
