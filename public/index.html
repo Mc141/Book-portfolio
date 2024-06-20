@@ -1,201 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.C. Wolmarans</title>
-    
-    <!-- Latest jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>M.C. Wolmarans</title>
+        
+        <!-- Latest jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-<div id="book">
-    <div class="cover">
-        <h1>Digital Chronicles: <br>Crafting My Path <br>in Software Development</h1>
-        <p>Programmed by M.C. Wolmarans</p>
-    </div>
-    <div class="page odd content-pages index-page" id="index">
-        <div class="data">
-            <div class="index-container">
-                <h2>Index</h2>
-                <ul>
-                    <li><a href="#" onclick="navigateTo('prologue')">Prologue - About Me</a></li>
-                    <li><a href="#" class="index-link" data-section="introduction">Introduction about yourself</a></li>
-                    <li><a href="#" class="index-link" data-section="story">Personal story or career journey</a></li>
-                    <li><a href="#" class="index-link" data-section="milestones">Key milestones or experiences</a></li>
-                    <li><a href="#" class="index-link" data-section="timeline">Brief timeline or highlights</a></li>
-                    <li><a href="#" onclick="navigateTo('chapters')">Chapters - Projects</a>
-                        <ul>
-                            <li><a href="#" onclick="navigateTo('chapter1')">Chapter 1: Project Title</a></li>
-                            <li><a href="#" onclick="navigateTo('chapter2')">Chapter 2: Project Title</a></li>
-                            <!-- Add more chapters as needed -->
-                        </ul>
-                    </li>
-                    <li><a href="#" onclick="navigateTo('appendix')">Appendix - Skills</a></li>
-                    <li><a href="#" class="index-link" data-section="contact">Epilogue - Contact Me</a></li>
-                </ul>
-            </div>
+    <div id="book">
+        <div class="cover">
+            <h1>Digital Chronicles: <br>Crafting My Path <br>in Software Development</h1>
+            <p>Programmed by M.C. Wolmarans</p>
         </div>
-    </div>
-    
-    <div class="page even content-pages" id="page-2">
-        <div class="data">
-            <h2>Prologue - About Me</h2>
-        </div>
-    </div>
-    <div class="page odd content-pages" id="page-3">
-        <div class="data">
-            <p><strong>Introduction:</strong> Hello! I’m Martinus Christoffel Wolmarans. Currently in my second year at Belgium Campus, pursuing a Bachelor of Computing with a specialization in Software Engineering. Originally from Pretoria, South Africa, my journey in technology began with a passion for problem-solving and innovation.</p>
-            
-            <p><strong>Personal Story and Career Journey:</strong> From a young age, I’ve been fascinated by how technology shapes our world. My journey into software engineering started with curiosity-driven exploration and a desire to create meaningful solutions. Studying at Belgium Campus has provided me with a robust foundation in computer science and software development, igniting my enthusiasm to contribute to the tech industry.</p>
-            
-            <p><strong>Key Milestones and Experiences:</strong> Throughout my academic journey, I’ve embraced hands-on learning experiences and collaborated on various projects that have deepened my understanding of software engineering principles.</p>
-        </div>
-    </div>
-    <div class="page even content-pages" id="page-4">
-        <div class="data">
-            <p>These experiences have not only honed my technical skills but also instilled in me a commitment to continuous learning and growth.</p>
-            
-            <p><strong>Brief Timeline or Highlights:</strong></p>
-            <ul>
-                <li><strong>Early Years:</strong> Introduced to programming languages and computer systems, sparking my interest in technology.</li>
-                <li><strong>Education:</strong> Currently advancing my skills in software engineering at Belgium Campus, acquiring knowledge in areas such as programming languages, algorithms, and software design.</li>
-                <li><strong>Projects and Collaborations:</strong> Engaged in diverse projects that have allowed me to apply theoretical knowledge to practical solutions, preparing me for real-world challenges in the field.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="page odd content-pages" id="page-5">
-        <div class="data">
-        </div>
-    </div>
-
-    <div class="page even content-pages" id="page-6">
-        <div class="data">
-        </div>
-    </div>
-
-    <div class="page odd content-pages" id="page-7">
-        <div class="data">
-        </div>
-    </div>
-
-    <div class="page even content-pages" id="page-8">
-        <div class="data">
-            <div class="contact-form">
-                <h2>Contact Me</h2>
-                <form action="/submit_form" method="POST">
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" required>
-                    
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" name="last-name" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                    
-                    <button type="submit">Send</button>
-                </form>
-                
-                
-                
-                <div class="social-media">
-                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="mailto:YOUR_EMAIL_ADDRESS" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_PROFILE" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/YOUR_GITHUB_PROFILE" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://twitter.com/YOUR_TWITTER_PROFILE" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
+        <div class="page odd content-pages index-page" id="index">
+            <div class="data">
+                <div class="index-container">
+                    <h2>Index</h2>
+                    <ul>
+                        <li><a href="#" onclick="navigateTo('prologue')">Prologue - About Me</a></li>
+                        <li><a href="#" class="index-link" data-section="introduction">Introduction about yourself</a></li>
+                        <li><a href="#" class="index-link" data-section="story">Personal story or career journey</a></li>
+                        <li><a href="#" class="index-link" data-section="milestones">Key milestones or experiences</a></li>
+                        <li><a href="#" class="index-link" data-section="timeline">Brief timeline or highlights</a></li>
+                        <li><a href="#" onclick="navigateTo('chapters')">Chapters - Projects</a>
+                            <ul>
+                                <li><a href="#" onclick="navigateTo('chapter1')">Chapter 1: Project Title</a></li>
+                                <li><a href="#" onclick="navigateTo('chapter2')">Chapter 2: Project Title</a></li>
+                                <!-- Add more chapters as needed -->
+                            </ul>
+                        </li>
+                        <li><a href="#" onclick="navigateTo('appendix')">Appendix - Skills</a></li>
+                        <li><a href="#" class="index-link" data-section="contact">Epilogue - Contact Me</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
+        
+        <div class="page even content-pages" id="page-2">
+            <div class="data">
+                <h2>Prologue - About Me</h2>
+            </div>
+        </div>
+        <div class="page odd content-pages" id="page-3">
+            <div class="data">
+                <p><strong>Introduction:</strong> Hello! I’m Martinus Christoffel Wolmarans. Currently in my second year at Belgium Campus, pursuing a Bachelor of Computing with a specialization in Software Engineering. Originally from Pretoria, South Africa, my journey in technology began with a passion for problem-solving and innovation.</p>
+                
+                <p><strong>Personal Story and Career Journey:</strong> From a young age, I’ve been fascinated by how technology shapes our world. My journey into software engineering started with curiosity-driven exploration and a desire to create meaningful solutions. Studying at Belgium Campus has provided me with a robust foundation in computer science and software development, igniting my enthusiasm to contribute to the tech industry.</p>
+                
+                <p><strong>Key Milestones and Experiences:</strong> Throughout my academic journey, I’ve embraced hands-on learning experiences and collaborated on various projects that have deepened my understanding of software engineering principles.</p>
+            </div>
+        </div>
+        <div class="page even content-pages" id="page-4">
+            <div class="data">
+                <p>These experiences have not only honed my technical skills but also instilled in me a commitment to continuous learning and growth.</p>
+                
+                <p><strong>Brief Timeline or Highlights:</strong></p>
+                <ul>
+                    <li><strong>Early Years:</strong> Introduced to programming languages and computer systems, sparking my interest in technology.</li>
+                    <li><strong>Education:</strong> Currently advancing my skills in software engineering at Belgium Campus, acquiring knowledge in areas such as programming languages, algorithms, and software design.</li>
+                    <li><strong>Projects and Collaborations:</strong> Engaged in diverse projects that have allowed me to apply theoretical knowledge to practical solutions, preparing me for real-world challenges in the field.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page odd content-pages" id="page-5">
+            <div class="data">
+            </div>
+        </div>
+
+        <div class="page even content-pages" id="page-6">
+            <div class="data">
+            </div>
+        </div>
+
+        <div class="page odd content-pages" id="page-7">
+            <div class="data">
+            </div>
+        </div>
+
+        <div class="page even content-pages" id="page-8">
+            <div class="data">
+                <div class="contact-form">
+                    <h2>Contact Me</h2>
+
+                    
+                    <form action="/submit_form" method="POST">
+  
+                        
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                        
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        
+                        <button type="submit">Send</button>
+                    </form>
+                    
+                    
+                    
+                    
+                    
+                    <div class="social-media">
+                        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:YOUR_EMAIL_ADDRESS" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_PROFILE" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/YOUR_GITHUB_PROFILE" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/YOUR_TWITTER_PROFILE" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-</div>
-
-<!-- Custom JavaScript -->
-<script src="turn.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
-    $('#book').turn({
-        acceleration: true,
-        pages: 4, // Total number of pages
-        elevation: 50,
-        gradients: !$.isTouch,
-        when: {
-            turning: function(event, page, view) {
-                if (page === 1) {
-                    $('#book').removeClass('open').addClass('closed');
-                } else {
-                    $('#book').removeClass('closed').addClass('open');
+    <!-- Custom JavaScript -->
+    <script src="turn.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#book').turn({
+            acceleration: true,
+            pages: 4, // Total number of pages
+            elevation: 50,
+            gradients: !$.isTouch,
+            when: {
+                turning: function(event, page, view) {
+                    if (page === 1) {
+                        $('#book').removeClass('open').addClass('closed');
+                    } else {
+                        $('#book').removeClass('closed').addClass('open');
+                    }
                 }
             }
+        });
+
+        // Initialize book state
+        $('#book').addClass('closed');
+
+        // Function to navigate to a section/page
+        function navigateTo(sectionId) {
+            switch (sectionId) {
+                case 'prologue':
+                    $('#book').turn('page', 2); // Prologue page
+                    break;
+                case 'introduction':
+                    $('#book').turn('page', 4); // Introduction page
+                    break;
+                case 'story':
+                    $('#book').turn('page', 6); // Story page
+                    break;
+                case 'contact':
+                    $('#book').turn('page', 8); // Milestones page
+                    break;
+                case 'timeline':
+                    $('#book').turn('page', 10); // Timeline page
+                    break;
+                case 'chapters':
+                    $('#book').turn('page', 12); // Chapters page
+                    break;
+                case 'appendix':
+                    $('#book').turn('page', 14); // Appendix page
+                    break;
+                case 'epilogue':
+                    $('#book').turn('page', 16); // Epilogue page
+                    break;
+            }
         }
+
+        // Handle index link clicks
+        $('.index-link').click(function (e) {
+            e.preventDefault();
+            var sectionId = $(this).data('section');
+            navigateTo(sectionId);
+        });
     });
 
-    // Initialize book state
-    $('#book').addClass('closed');
-
-    // Function to navigate to a section/page
-    function navigateTo(sectionId) {
-        switch (sectionId) {
-            case 'prologue':
-                $('#book').turn('page', 2); // Prologue page
-                break;
-            case 'introduction':
-                $('#book').turn('page', 4); // Introduction page
-                break;
-            case 'story':
-                $('#book').turn('page', 6); // Story page
-                break;
-            case 'contact':
-                $('#book').turn('page', 8); // Milestones page
-                break;
-            case 'timeline':
-                $('#book').turn('page', 10); // Timeline page
-                break;
-            case 'chapters':
-                $('#book').turn('page', 12); // Chapters page
-                break;
-            case 'appendix':
-                $('#book').turn('page', 14); // Appendix page
-                break;
-            case 'epilogue':
-                $('#book').turn('page', 16); // Epilogue page
-                break;
-        }
-    }
-
-    // Handle index link clicks
-    $('.index-link').click(function (e) {
-        e.preventDefault();
-        var sectionId = $(this).data('section');
-        navigateTo(sectionId);
-    });
-});
 
 
 
@@ -205,12 +212,7 @@ $(document).ready(function () {
 
 
 
+    </script>
 
-
-
-
-
-</script>
-
-</body>
-</html>
+    </body>
+    </html>
