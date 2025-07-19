@@ -1,5 +1,5 @@
 {
-  "name": "imporve-project-structure",
+  "name": "book-portfolio",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "dotenv": "^17.2.0",
     "express": "^4.21.2",
     "express-validator": "^7.2.1",
+    "googleapis": "^153.0.0",
     "http-errors": "~1.6.3",
     "morgan": "^1.10.1",
     "nodemailer": "^7.0.5"

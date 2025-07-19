@@ -3,6 +3,7 @@ var router = express.Router();
 require('dotenv').config();
 const { check, validationResult } = require('express-validator');
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 
 
@@ -31,17 +32,14 @@ const validateForm = [
 
 
 // POST endpoint to handle form submissions
-router.post('/submit_form', validateForm, (req, res) => {
-    // Validate inputs
+router.post('/contact', validateForm, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
 
-    // Destructure form data from request body
     const { 'first-name': firstName, 'last-name': lastName, email, message } = req.body;
 
-    // Create Nodemailer transporter
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -54,7 +52,6 @@ router.post('/submit_form', validateForm, (req, res) => {
         }
     });
 
-    // Email message configuration
     let mailOptions = {
         from: process.env.GMAIL_USER,
         to: process.env.GMAIL_USER,
@@ -66,17 +63,16 @@ router.post('/submit_form', validateForm, (req, res) => {
         `
     };
 
-    // Send email
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log(error);
-            res.status(500).send('Error sending message');
-        } else {
-            console.log('Email sent: ' + info.response);
-            res.send('Message sent successfully');
-        }
-    });
+    try {
+        const info = await transporter.sendMail(mailOptions);
+        console.log('Email sent:', info.response);
+        res.status(200).send('Message sent successfully');
+    } catch (error) {
+        console.error('SendMail Error:', error);
+        res.status(500).send('Failed to send message. Please try again later.');
+    }
 });
+
 
 
 
