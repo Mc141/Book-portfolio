@@ -1,18 +1,19 @@
-const totalPages = 9;
+const totalPages = 10;
 
 function navigateTo(sectionId) {
   switch (sectionId) {
-    case 'prologue': $('#book').turn('page', 2); break;
-    case 'origin': $('#book').turn('page', 3); break;
-    case 'growth': $('#book').turn('page', 4); break;
-    case 'skills': $('#book').turn('page', 5); break;
+    case 'prologue': $('#book').turn('page', 3); break;
+    case 'intro-photo-cv': $('#book').turn('page', 4); break;
+    case 'origin': $('#book').turn('page', 5); break;
+    case 'growth': $('#book').turn('page', 6); break;
+    case 'skills': $('#book').turn('page', 7); break;
     case 'chapters':
     case 'chapter1':
-    case 'chapter2': $('#book').turn('page', 6); break;
-    case 'tutor': $('#book').turn('page', 7); break;
+    case 'chapter2': $('#book').turn('page', 8); break;
+    case 'tutor': $('#book').turn('page', 9); break;
     case 'now':
-    case 'contact': $('#book').turn('page', 8); break;
-    case 'social': $('#book').turn('page', 9); break;
+    case 'contact': $('#book').turn('page', 10); break;
+    case 'social': $('#book').turn('page', 11); break;
   }
 }
 
@@ -40,9 +41,9 @@ $(document).ready(function () {
   });
 
   $('#book').addClass('closed');
-  updateProgress(1); // initial
+  updateProgress(1);
 
-  $('.index-link').click(function (e) {
+  $('#book').on('click', '.index-link', function (e) {
     e.preventDefault();
     const sectionId = $(this).data('section');
     navigateTo(sectionId);

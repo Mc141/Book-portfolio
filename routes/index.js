@@ -1,29 +1,21 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-const path = require('path');
-const { check, validationResult } = require('express-validator');
-const rateLimit = require("express-rate-limit");
-const cookieParser = require('cookie-parser');
+var express = require('express');
+var router = express.Router();
 require('dotenv').config();
+const { check, validationResult } = require('express-validator');
+const path = require('path');
 
-const app = express();
 
-// Middleware setup
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(cookieParser());
 
-// Serve static files (HTML, CSS, JS, images)
-app.use(express.static(path.join(__dirname, 'public')));
 
-// Rate limiting middleware
-const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 5, // limit each IP to 5 requests per windowMs
-    message: 'Too many requests from this IP, please try again later'
+// GET home page
+router.get('/', function (req, res, next) {
+    res.sendFile(path.join(__dirname, '../views/index.html'));
 });
-app.use('/submit_form', limiter);
+
+
+
+
+
 
 // Validation middleware using express-validator
 const validateForm = [
@@ -33,8 +25,13 @@ const validateForm = [
     check('message').notEmpty().trim().escape()
 ];
 
+
+
+
+
+
 // POST endpoint to handle form submissions
-app.post('/submit_form', validateForm, (req, res) => {
+router.post('/submit_form', validateForm, (req, res) => {
     // Validate inputs
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -81,8 +78,12 @@ app.post('/submit_form', validateForm, (req, res) => {
     });
 });
 
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+
+
+
+
+module.exports = router;
+
+
+
+

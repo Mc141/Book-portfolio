@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>M.C. Wolmarans</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="stylesheets/style.css" />
+
+  <!-- jQuery & Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="javascripts/turn.js"></script>
+  <script defer src="javascripts/page.js"></script>
+</head>
+<body>
+<div id="book">
+    <div class="cover">
+        <h1>Digital Chronicles:<br>Crafting My Path<br>in Software Development</h1>
+        <p>By M.C. Wolmarans</p>
+    </div>
+
+    <div class="page odd content-pages index-page" id="index">
+        <div class="data">
+            <div class="index-container">
+                <h2>Index</h2>
+                <ul>
+                    <li><a href="#" onclick="navigateTo('prologue')">Prologue - My Why</a></li>
+                    <li><a href="#" class="index-link" data-section="origin">Beginnings</a></li>
+                    <li><a href="#" class="index-link" data-section="growth">The Student Chapter</a></li>
+                    <li><a href="#" class="index-link" data-section="skills">Skills & Tools</a></li>
+                    <li><a href="#" onclick="navigateTo('chapters')">Projects</a></li>
+                    <li><a href="#" class="index-link" data-section="tutor">Teaching & Tutoring</a></li>
+                    <li><a href="#" class="index-link" data-section="now">Where I Am Now</a></li>
+                    <li><a href="#" class="index-link" data-section="contact">Epilogue - Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page even content-pages" id="page-2" data-section="prologue">
+        <div class="data">
+            <h2>Prologue – My Why</h2>
+            <p>Some journeys start with a clear destination. Mine began with a question: <em>How does the digital world really work?</em> From a young age, I was fascinated by how invisible lines of code could transform into real-world solutions. Software wasn’t just syntax or commands to me; it was a language—a bridge between human ideas and tangible impact.</p>
+            <p>That curiosity evolved into a passion: to build systems that solve problems, simplify lives, and inspire innovation. This story is about how I’ve turned that curiosity into skills, challenges into lessons, and dreams into projects.</p>
+        </div>
+    </div>
+
+    <!-- NEW PAGE: Photo + CV -->
+    <div class="page odd content-pages" id="page-2b" data-section="intro-photo-cv">
+        <div class="data" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h2>Meet Me</h2>
+            <img src="images/banner.png" alt="M.C. Wolmarans" style="width: 160px; height: auto; border-radius: 8px; margin-bottom: 15px;" />
+            <p>Hi, I'm Martinus. Here's a face to the name behind the story. If you'd like a deeper look into my background, feel free to download my full CV below.</p>
+            <a href="downloads/Martinus_Wolmarans_CV.pdf" class="cv-button" download>Download My CV</a>
+        </div>
+    </div>
+
+    <div class="page even content-pages" id="page-3" data-section="origin">
+        <div class="data">
+            <h2>Beginnings</h2>
+            <p>Growing up in Pretoria, South Africa, I was the kid who couldn’t leave a gadget alone. Disassembling electronics was less about breaking things and more about understanding their secrets. This playful curiosity naturally grew into a fascination with engineering and programming.</p>
+            <p>At HTS John Vorster, I immersed myself in mathematics and physical sciences, subjects that sharpened my logical thinking and problem-solving skills. Graduating as valedictorian with six distinctions wasn’t just a measure of academic success—it was a milestone in my journey to mastering the fundamentals that underpin software engineering.</p>
+            <p>But beyond the grades, it was the joy of discovery and the thrill of understanding complex concepts that truly shaped me.</p>
+        </div>
+    </div>
+
+    <div class="page odd content-pages" id="page-4" data-section="growth">
+        <div class="data">
+            <h2>The Student Chapter</h2>
+            <p>Starting my Bachelor of Computing at Belgium Campus felt like entering a new world—a world where theory met practice, and ideas came to life through code. I quickly found my rhythm with languages like C#, Python, and JavaScript, and I relished the challenge of building full-stack applications from scratch.</p>
+            <p>The curriculum was demanding, but it pushed me to connect the dots between frontend design, backend logic, and database management. Each project taught me more about not just technology, but about collaboration, iteration, and the power of well-crafted software.</p>
+            <p>By my second year, I had stepped into a new role—that of a tutor. Helping fellow students unravel difficult concepts reinforced my own understanding and reminded me that teaching is a two-way street. I maintained my academic standing at the top, not by chance, but through deliberate practice and a commitment to continuous growth.</p>
+        </div>
+    </div>
+
+    <div class="page even content-pages" id="page-5" data-section="skills">
+        <div class="data">
+            <h2>Skills & Tools</h2>
+            <ul>
+                <li><strong>Languages:</strong> C#, Python, JavaScript, SQL</li>
+                <li><strong>Frameworks:</strong> .NET, ASP.NET MVC, Node.js, Express.js, Entity Framework</li>
+                <li><strong>Databases:</strong> SQL Server, MongoDB, Microsoft Access</li>
+                <li><strong>Current Focus:</strong> Learning React, deepening full-stack skills</li>
+                <li><strong>Other Interests:</strong> 3D Printing, Arduino prototyping</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page odd content-pages" id="page-6" data-section="chapters">
+        <div class="data">
+            <h2>Projects (Chapters)</h2>
+            <p>Every project marks a chapter in my story, each with its own lessons and triumphs:</p>
+            <ul>
+                <li><strong>Chapter 1:</strong> A budgeting app designed for students, built with ASP.NET MVC and SQL Server, which taught me how to blend usability with robust backend logic.</li>
+                <li><strong>Chapter 2:</strong> An Arduino-powered soil moisture system tailored for chicken farms, where I combined software and hardware to solve a real-world agricultural problem.</li>
+                <li><strong>Chapter 3:</strong> This very portfolio site—a digital book crafted with JavaScript and turn.js—showcases my ability to blend creativity with technical skill.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page even content-pages" id="page-7" data-section="tutor">
+        <div class="data">
+            <h2>Teaching & Tutoring</h2>
+            <p>Teaching has been a powerful part of my journey. In 2023, I tutored learners in Mathematics and Physical Sciences at Meta Centre, helping them build not only knowledge but confidence.</p>
+            <p>In 2024, I extended this role at the university level, tutoring web development, databases, and programming at Belgium Campus. Each session was a reminder that learning is most meaningful when shared—and that by helping others, I deepen my own expertise.</p>
+        </div>
+    </div>
+
+    <div class="page odd content-pages" id="page-8" data-section="contact">
+        <div class="data contact-form">
+            <h2>Epilogue – Contact Me</h2>
+            <p>If you’ve followed this story and it resonates with you, or if you’d like to explore opportunities to collaborate or connect, I’d love to hear from you. Every new chapter begins with a conversation.</p>
+
+            <form action="/submit_form" method="POST">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="page even content-pages" id="page-9" data-section="connect">
+        <div class="data">
+            <h2>Connect With Me</h2>
+            <p>I believe the best projects come from genuine collaboration. Feel free to reach out via email, LinkedIn, GitHub, or any of the channels below.</p>
+
+            <div class="social-media">
+                <a href="https://wa.me/0812471255" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:mcwolmarans141@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Mc141" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mcwolmarans" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/mc_wolmarans" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="navigation-controls">
+    <button id="prevPage" title="Previous Page"><i class="fas fa-arrow-left"></i></button>
+    <div class="progress-container">
+        <div id="progressBar"></div>
+    </div>
+    <button id="nextPage" title="Next Page"><i class="fas fa-arrow-right"></i></button>
+</div>
+</body>
+</html>
