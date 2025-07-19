@@ -49,11 +49,20 @@ $(document).ready(function () {
     navigateTo(sectionId);
   });
 
-  $('#prevPage').click(function () {
-    $('#book').turn('previous');
-  });
+$('#prevPage').click(function () {
+  $('#book').turn('previous');
+});
 
-  $('#nextPage').click(function () {
-    $('#book').turn('next');
-  });
+$('#nextPage').click(function () {
+  $('#book').turn('next');
+});
+
+$('#firstPage').click(function () {
+  $('#book').turn('page', 1);
+});
+
+$('#lastPage').click(function () {
+  $('#book').turn('page', totalPages);
+});
+
 });

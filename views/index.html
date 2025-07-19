@@ -18,7 +18,7 @@
   <!-- jQuery & Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script defer src="javascripts/turn.js"></script>
-  <script defer src="javascripts/page.js"></script>
+  <script defer src="javascripts/indexPaging.js"></script>
 </head>
 <body>
 <div id="book">
@@ -38,7 +38,6 @@
                     <li><a href="#" class="index-link" data-section="skills">Skills & Tools</a></li>
                     <li><a href="#" onclick="navigateTo('chapters')">Projects</a></li>
                     <li><a href="#" class="index-link" data-section="tutor">Teaching & Tutoring</a></li>
-                    <li><a href="#" class="index-link" data-section="now">Where I Am Now</a></li>
                     <li><a href="#" class="index-link" data-section="contact">Epilogue - Contact</a></li>
                 </ul>
             </div>
@@ -48,17 +47,16 @@
     <div class="page even content-pages" id="page-2" data-section="prologue">
         <div class="data">
             <h2>Prologue – My Why</h2>
-            <p>Some journeys start with a clear destination. Mine began with a question: <em>How does the digital world really work?</em> From a young age, I was fascinated by how invisible lines of code could transform into real-world solutions. Software wasn’t just syntax or commands to me; it was a language—a bridge between human ideas and tangible impact.</p>
-            <p>That curiosity evolved into a passion: to build systems that solve problems, simplify lives, and inspire innovation. This story is about how I’ve turned that curiosity into skills, challenges into lessons, and dreams into projects.</p>
+            <p>Some journeys begin with a road map. Mine began with a question: <em>How does the digital world really work?</em> I didn’t want to just use software—I wanted to understand its heartbeat, its mechanics, its logic. What began as childlike wonder slowly grew into a mission: to build, to solve, and to contribute.</p>
+            <p>This story is not a linear checklist of skills—it’s a layered process of growth, shaped by late nights of coding, moments of clarity during tutoring sessions, and a growing sense of calling. Technology, to me, is a tool. Purpose is the goal.</p>
         </div>
     </div>
 
-    <!-- NEW PAGE: Photo + CV -->
     <div class="page odd content-pages" id="page-2b" data-section="intro-photo-cv">
         <div class="data" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <h2>Meet Me</h2>
             <img src="images/banner.png" alt="M.C. Wolmarans" style="width: 160px; height: auto; border-radius: 8px; margin-bottom: 15px;" />
-            <p>Hi, I'm Martinus. Here's a face to the name behind the story. If you'd like a deeper look into my background, feel free to download my full CV below.</p>
+            <p>Hi, I'm MC. Here's a face to the name behind the story. If you'd like a deeper look into my background, feel free to download my full CV below.</p>
             <a href="downloads/Martinus_Wolmarans_CV.pdf" class="cv-button" download>Download My CV</a>
         </div>
     </div>
@@ -66,18 +64,17 @@
     <div class="page even content-pages" id="page-3" data-section="origin">
         <div class="data">
             <h2>Beginnings</h2>
-            <p>Growing up in Pretoria, South Africa, I was the kid who couldn’t leave a gadget alone. Disassembling electronics was less about breaking things and more about understanding their secrets. This playful curiosity naturally grew into a fascination with engineering and programming.</p>
-            <p>At HTS John Vorster, I immersed myself in mathematics and physical sciences, subjects that sharpened my logical thinking and problem-solving skills. Graduating as valedictorian with six distinctions wasn’t just a measure of academic success—it was a milestone in my journey to mastering the fundamentals that underpin software engineering.</p>
-            <p>But beyond the grades, it was the joy of discovery and the thrill of understanding complex concepts that truly shaped me.</p>
+            <p>I grew up in Pretoria, South Africa, where wires, remote controls, and motherboards became my playground. I was that kid—the one taking apart gadgets not to destroy, but to decode their secrets. That hands-on curiosity led me to HTS John Vorster, where maths and physical sciences became my foundation stones.</p>
+            <p>I didn’t just study—I thrived. Graduating as valedictorian with six distinctions wasn’t just a title, but a testimony to countless hours of discovery, problem-solving, and persistence. I wasn’t chasing marks—I was chasing meaning. And in those early years, I found it through logic, patterns, and the magic of engineering principles.</p>
         </div>
     </div>
 
     <div class="page odd content-pages" id="page-4" data-section="growth">
         <div class="data">
             <h2>The Student Chapter</h2>
-            <p>Starting my Bachelor of Computing at Belgium Campus felt like entering a new world—a world where theory met practice, and ideas came to life through code. I quickly found my rhythm with languages like C#, Python, and JavaScript, and I relished the challenge of building full-stack applications from scratch.</p>
-            <p>The curriculum was demanding, but it pushed me to connect the dots between frontend design, backend logic, and database management. Each project taught me more about not just technology, but about collaboration, iteration, and the power of well-crafted software.</p>
-            <p>By my second year, I had stepped into a new role—that of a tutor. Helping fellow students unravel difficult concepts reinforced my own understanding and reminded me that teaching is a two-way street. I maintained my academic standing at the top, not by chance, but through deliberate practice and a commitment to continuous growth.</p>
+            <p>At Belgium Campus, I stepped into an entirely new arena—one that demanded not only theoretical sharpness, but practical creativity. With every module, I moved from curiosity to competence. C#, Python, JavaScript—they became tools in my toolkit. And more recently, Java, JSP, Servlets, and even Swing broadened the horizon.</p>
+            <p>By my second year, I didn’t just consume knowledge—I shared it. I began tutoring fellow students in web development, databases, and software principles. Helping others helped me, too. It clarified my thinking, deepened my empathy, and reinforced one truth: that education is a cycle of giving and growing.</p>
+            <p>Now, as a third-year student preparing for my final stretch, I am looking ahead—with intention. I’m seeking an internship opportunity that will allow me to apply what I’ve learned, challenge what I think I know, and contribute meaningfully to a real-world team. I’m not just looking to work—I’m looking to serve, grow, and leave a mark.</p>
         </div>
     </div>
 
@@ -85,11 +82,11 @@
         <div class="data">
             <h2>Skills & Tools</h2>
             <ul>
-                <li><strong>Languages:</strong> C#, Python, JavaScript, SQL</li>
+                <li><strong>Languages:</strong> C#, Python, JavaScript, Java (Servlets, JSP, Swing), SQL</li>
                 <li><strong>Frameworks:</strong> .NET, ASP.NET MVC, Node.js, Express.js, Entity Framework</li>
                 <li><strong>Databases:</strong> SQL Server, MongoDB, Microsoft Access</li>
-                <li><strong>Current Focus:</strong> Learning React, deepening full-stack skills</li>
-                <li><strong>Other Interests:</strong> 3D Printing, Arduino prototyping</li>
+                <li><strong>Current Focus:</strong> Learning React, advancing full-stack fluency, solidifying OOP design</li>
+                <li><strong>Other Interests:</strong> 3D Printing, Arduino prototyping, personal software ventures</li>
             </ul>
         </div>
     </div>
@@ -97,11 +94,11 @@
     <div class="page odd content-pages" id="page-6" data-section="chapters">
         <div class="data">
             <h2>Projects (Chapters)</h2>
-            <p>Every project marks a chapter in my story, each with its own lessons and triumphs:</p>
+            <p>Every project I’ve completed tells a story—of trial, iteration, and insight:</p>
             <ul>
-                <li><strong>Chapter 1:</strong> A budgeting app designed for students, built with ASP.NET MVC and SQL Server, which taught me how to blend usability with robust backend logic.</li>
-                <li><strong>Chapter 2:</strong> An Arduino-powered soil moisture system tailored for chicken farms, where I combined software and hardware to solve a real-world agricultural problem.</li>
-                <li><strong>Chapter 3:</strong> This very portfolio site—a digital book crafted with JavaScript and turn.js—showcases my ability to blend creativity with technical skill.</li>
+                <li><strong>Chapter 1:</strong> A budgeting app built with ASP.NET MVC and SQL Server, designed to help students manage their finances practically and intuitively.</li>
+                <li><strong>Chapter 2:</strong> An Arduino-based soil moisture system, tailored for chicken farms—where hardware met software in solving a real-world agricultural challenge.</li>
+                <li><strong>Chapter 3:</strong> This very portfolio—a digital book styled with JavaScript and Turn.js—representing my design sensibilities and technical voice.</li>
             </ul>
         </div>
     </div>
@@ -109,11 +106,12 @@
     <div class="page even content-pages" id="page-7" data-section="tutor">
         <div class="data">
             <h2>Teaching & Tutoring</h2>
-            <p>Teaching has been a powerful part of my journey. In 2023, I tutored learners in Mathematics and Physical Sciences at Meta Centre, helping them build not only knowledge but confidence.</p>
-            <p>In 2024, I extended this role at the university level, tutoring web development, databases, and programming at Belgium Campus. Each session was a reminder that learning is most meaningful when shared—and that by helping others, I deepen my own expertise.</p>
+            <p>In 2023, I started tutoring high school learners in Mathematics and Physical Sciences at Meta Centre. What began as an opportunity to support others quickly became a passion for teaching and mentoring.</p>
+            <p>In 2024, I transitioned into tutoring at Belgium Campus, helping peers in areas like programming, databases, and web development. Tutoring grounded me in the principle that real learning happens when we teach, and that knowledge shared is knowledge deepened.</p>
         </div>
     </div>
 
+   
     <div class="page odd content-pages" id="page-8" data-section="contact">
         <div class="data contact-form">
             <h2>Epilogue – Contact Me</h2>
@@ -137,7 +135,7 @@
         </div>
     </div>
 
-    <div class="page even content-pages" id="page-9" data-section="connect">
+    <div class="page odd content-pages" id="page-9" data-section="connect">
         <div class="data">
             <h2>Connect With Me</h2>
             <p>I believe the best projects come from genuine collaboration. Feel free to reach out via email, LinkedIn, GitHub, or any of the channels below.</p>
@@ -154,11 +152,23 @@
 </div>
 
 <div class="navigation-controls">
-    <button id="prevPage" title="Previous Page"><i class="fas fa-arrow-left"></i></button>
+    <div class="navigation-buttons">
+        <button id="firstPage" title="First Page"><i class="fas fa-angle-double-left"></i></button>
+        <button id="prevPage" title="Previous Page"><i class="fas fa-arrow-left"></i></button>
+    </div>
+
+    
     <div class="progress-container">
         <div id="progressBar"></div>
     </div>
-    <button id="nextPage" title="Next Page"><i class="fas fa-arrow-right"></i></button>
+
+    <div class="navigation-buttons">
+        <button id="nextPage" title="Next Page"><i class="fas fa-arrow-right"></i></button>
+        <button id="lastPage" title="Last Page"><i class="fas fa-angle-double-right"></i></button>
+    </div>
+
 </div>
+
+
 </body>
 </html>
