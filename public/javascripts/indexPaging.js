@@ -1,4 +1,4 @@
-const totalPages = 10;
+const totalPages = 11;
 
 function navigateTo(sectionId) {
   switch (sectionId) {
@@ -9,11 +9,14 @@ function navigateTo(sectionId) {
     case 'skills': $('#book').turn('page', 7); break;
     case 'chapters':
     case 'chapter1':
-    case 'chapter2': $('#book').turn('page', 8); break;
-    case 'tutor': $('#book').turn('page', 9); break;
+    case 'chapter2':
+    case 'chapter3':
+    case 'chapter4':
+      $('#book').turn('page', 8); break;
+    case 'tutor': $('#book').turn('page', 10); break;
     case 'now':
-    case 'contact': $('#book').turn('page', 10); break;
-    case 'social': $('#book').turn('page', 11); break;
+    case 'contact': $('#book').turn('page', 11); break;
+    case 'social': $('#book').turn('page', 12); break;
   }
 }
 
@@ -49,20 +52,19 @@ $(document).ready(function () {
     navigateTo(sectionId);
   });
 
-$('#prevPage').click(function () {
-  $('#book').turn('previous');
-});
+  $('#prevPage').click(function () {
+    $('#book').turn('previous');
+  });
 
-$('#nextPage').click(function () {
-  $('#book').turn('next');
-});
+  $('#nextPage').click(function () {
+    $('#book').turn('next');
+  });
 
-$('#firstPage').click(function () {
-  $('#book').turn('page', 1);
-});
+  $('#firstPage').click(function () {
+    $('#book').turn('page', 1);
+  });
 
-$('#lastPage').click(function () {
-  $('#book').turn('page', totalPages);
-});
-
+  $('#lastPage').click(function () {
+    $('#book').turn('page', totalPages);
+  });
 });
