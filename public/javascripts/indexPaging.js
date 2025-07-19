@@ -1,29 +1,73 @@
-const totalPages = 11;
+const totalPages = 14;
 
-function navigateTo(sectionId) {
-  switch (sectionId) {
-    case 'prologue': $('#book').turn('page', 3); break;
-    case 'intro-photo-cv': $('#book').turn('page', 4); break;
-    case 'origin': $('#book').turn('page', 5); break;
-    case 'growth': $('#book').turn('page', 6); break;
-    case 'skills': $('#book').turn('page', 7); break;
-    case 'chapters':
+function navigateTo(section) {
+  switch (section) {
+    case 'prologue':
+      $('#book').turn('page', 3);
+      break;
+    case 'intro-photo-cv':
+      $('#book').turn('page', 4);
+      break;
+    case 'origin':
+      $('#book').turn('page', 5);
+      break;
+    case 'growth':
+      $('#book').turn('page', 6);
+      break;
+    case 'skills':
+      $('#book').turn('page', 7);
+      break;
     case 'chapter1':
+      $('#book').turn('page', 8);
+      break;
     case 'chapter2':
+      $('#book').turn('page', 9);
+      break;
     case 'chapter3':
+      $('#book').turn('page', 10);
+      break;
     case 'chapter4':
-      $('#book').turn('page', 8); break;
-    case 'tutor': $('#book').turn('page', 10); break;
-    case 'now':
-    case 'contact': $('#book').turn('page', 11); break;
-    case 'social': $('#book').turn('page', 12); break;
+      $('#book').turn('page', 11);
+      break;
+    case 'tutor':
+      $('#book').turn('page', 12);
+      break;
+    case 'contact':
+      $('#book').turn('page', 13);
+      break;
+    case 'connect':
+      $('#book').turn('page', 14);
+      break;
+    default:
+      break;
   }
 }
 
+
+
 function updateProgress(currentPage) {
-  const progress = Math.floor((currentPage - 1) / (totalPages - 1) * 100);
-  $('#progressBar').css('width', `${progress}%`);
+  const firstContentPage = 1;
+  const lastContentPage = totalPages;
+
+  if (currentPage < firstContentPage) {
+    // Before content starts, progress is 0%
+    $('#progressBar').css('width', '0%');
+  } else if (currentPage >= lastContentPage) {
+    // At or after last page, progress is 100%
+    $('#progressBar').css('width', '100%');
+  } else {
+    // Calculate progress between first and last content page
+    const progress = Math.floor(
+      ((currentPage - firstContentPage) / (lastContentPage - firstContentPage)) * 100
+    );
+    $('#progressBar').css('width', `${progress}%`);
+  }
 }
+
+
+
+
+
 
 $(document).ready(function () {
   $('#book').turn({
