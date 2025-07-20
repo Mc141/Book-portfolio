@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>M.C. Wolmarans</title>
 
+  <!-- Mobile redirect script -->
+    <script>
+    if (window.matchMedia("(max-width: 850px)").matches) {
+    if (window.location.hostname === ("mcwolmarans.co.za" || "www.mcwolmarans.co.za")) {
+        window.location.href = "https://m.mcwolmarans.co.za" + window.location.pathname;
+    }
+    }
+    </script>
+
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet" />

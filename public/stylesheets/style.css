@@ -368,3 +368,68 @@ label {
   background-color: #007BFF;
   transition: width 0.3s ease-in-out;
 }
+
+
+
+
+
+
+
+
+/* For screens between 850px and 1000px (tablets/smaller monitors) */
+@media (max-width: 1000px) and (min-width: 850px) {
+  #book {
+    width: 850px;
+    height: 675px;
+  }
+
+  #book .cover h1 {
+    font-size: 40px;
+    line-height: 50px;
+    margin: 20px;
+  }
+
+  #book .cover p {
+    font-size: 18px;
+    line-height: 40px;
+    margin-top: 8em;
+  }
+
+  .content-pages .data {
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .content-pages .data h2 {
+    font-size: 20px;
+  }
+
+  .content-pages .data p,
+  .content-pages .data ul li {
+    font-size: 14px;
+  }
+
+  .project-image {
+    height: 120px;
+    max-width: 90%;
+  }
+
+  .navigation-controls button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .progress-container {
+    margin: 0 10px;
+  }
+}
+
+
+
+/* For screens larger than 1000px, keep original */
+@media (min-width: 1001px) {
+  #book {
+    width: 1000px;
+    height: 600px;
+  }
+}
