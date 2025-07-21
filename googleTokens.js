@@ -1,31 +1,41 @@
-const { google } = require('googleapis');
+require('dotenv').config();
+const { OAuth2Client } = require('google-auth-library');
 const readline = require('readline');
 
-// OAuth2 configuration
-const oauth2Client = new google.auth.OAuth2(
-  'client id',
-  'Client secret',
-  'url http://localhost:5000/'
+const oauth2Client = new OAuth2Client(
+  process.env.GMAIL_CLIENT_ID,
+  process.env.GMAIL_CLIENT_SECRET,
+  process.env.GMAIL_REDIRECT_URI
 );
 
-// Generate OAuth2 URL for authorization
+// Generate and display the URL to authorize the app
 const authUrl = oauth2Client.generateAuthUrl({
   access_type: 'offline',
-  scope: 'https://mail.google.com/'
+  scope: ['https://mail.google.com/'],
 });
 
-console.log('Authorize this app by visiting this url:', authUrl);
+console.log('Authorize this app by visiting this URL:\n', authUrl);
 
-// Capture authorization code
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
-rl.question('Enter the code from that page here: ', (code) => {
+rl.question('\nEnter the code from that page here: ', async (inputCode) => {
   rl.close();
-  oauth2Client.getToken(code, (err, token) => {
-    if (err) return console.error('Error retrieving access token', err);
-    console.log('Access token:', token);
-  });
+
+  let code = inputCode.trim();
+
+  // If the user pasted the whole redirect URL, extract just the code
+  if (code.includes('code=')) {
+    const match = code.match(/code=([^&]+)/);
+    if (match) code = decodeURIComponent(match[1]);
+  }
+
+  try {
+    const { tokens } = await oauth2Client.getToken(code);
+    console.log('\nTokens received:\n', tokens);
+  } catch (error) {
+    console.error('\nError retrieving access token:\n', error);
+  }
 });
