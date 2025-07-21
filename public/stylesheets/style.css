@@ -433,3 +433,56 @@ label {
     height: 600px;
   }
 }
+
+
+
+
+
+
+/* Error message styles */
+.error-message {
+  color: #d9534f;
+  font-size: 0.85em;
+
+  display: block;
+}
+
+/* Highlight input/textarea with error */
+.input-error {
+  border-color: #d9534f;
+  background-color: #fff4f4;
+}
+
+/* Feedback message styling */
+#form-message {
+  margin-top: 1em;
+  font-weight: bold;
+  font-size: 0.95em;
+  transition: opacity 1s ease;
+}
+
+/* Fade-out animation */
+.fade-out {
+  opacity: 0;
+}
+
+
+
+.submission-message {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white; /* success message color */
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  margin-top: 0.5rem;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.submission-message.error {
+  color: white; /* error red */
+}
+
+.submission-message.fade-out {
+  opacity: 0;
+}

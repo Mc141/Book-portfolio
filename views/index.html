@@ -19,7 +19,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet" />
-
+  <script defer src="javascripts/validator.js"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 
@@ -36,6 +36,7 @@
     <div class="cover">
         <h1>Digital Chronicles:<br>Crafting My Path<br>in Software Development</h1>
         <p>By M.C. Wolmarans</p>
+        <span id="submission-message" class="submission-message"></span>
     </div>
 
 <div class="page odd content-pages index-page" id="index">
@@ -189,34 +190,44 @@
     </div>
 
    
-    <div class="page even content-pages" id="page-11" data-section="contact">
-        <div class="data contact-form">
-            <h2>Epilogue – Contact Me</h2>
-            <p>If you’ve followed this story and it resonates with you, or if you’d like to explore opportunities to collaborate or connect, I’d love to hear from you. Every new chapter begins with a conversation.</p>
+<div class="page even content-pages" id="page-11" data-section="contact">
+  <div class="data contact-form" style="max-height: 100%; overflow-y: auto; padding-right: 10px;">
+    <h2 style="margin-bottom: 0.5rem;">Epilogue – Contact Me</h2>
+    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+      If you’ve followed this story and it resonates with you, or if you’d like to explore opportunities to collaborate or connect, I’d love to hear from you. Every new chapter begins with a conversation.
+    </p>
 
-            <form action="/contact" method="POST">
-                <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="first-name" required>
+    <form id="contact-form" action="/contact" method="POST" style="font-size: 0.9rem;">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" />
+      <span class="error-message"></span>
 
-                <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" name="last-name" required>
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" />
+      <span class="error-message"></span>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+      <span class="error-message"></span>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="3"></textarea>
+      <span class="error-message"></span>
 
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </div>
+      <div id="form-message" style="margin-top: 0.5rem;"></div>
+
+      <button id="submit-button" type="submit" style="margin-top: 0.5rem;">Send</button>
+    </form>
+  </div>
+</div>
 
     <div class="page odd content-pages" id="page-12" data-section="connect">
         <div class="data">
             <h2>Connect With Me</h2>
             <p>I believe the best projects come from genuine collaboration. Feel free to reach out via email, LinkedIn, GitHub, or any of the channels below.</p>
 
+
+            
             <div class="social-media">
                 <a href="https://wa.me/0812471255" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 <a href="mailto:mcwolmarans141@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>

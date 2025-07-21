@@ -63,13 +63,13 @@ router.post('/contact', validateForm, async (req, res) => {
         `
     };
 
-    try {
+       try {
         const info = await transporter.sendMail(mailOptions);
         console.log('Email sent:', info.response);
-        res.status(200).send('Message sent successfully');
+        res.redirect('/?success=1');
     } catch (error) {
         console.error('SendMail Error:', error);
-        res.status(500).send('Failed to send message. Please try again later.');
+        res.redirect('/?error=1');
     }
 });
 
