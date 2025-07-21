@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>M.C. Wolmarans</title>
 
-  <!-- Mobile redirect script -->
-    <script>
+<script>
+  (function () {
     if (window.matchMedia("(max-width: 850px)").matches) {
-    if (window.location.hostname === ("mcwolmarans.co.za" || "www.mcwolmarans.co.za")) {
-        window.location.href = "https://m.mcwolmarans.co.za" + window.location.pathname;
+      // Redirect users with screen width 850px or less
+      window.location.href = "https://m.mcwolmarans.co.za/";
     }
-    }
-    </script>
+  })();
+</script>
+
 
 
   <!-- Google Fonts -->
