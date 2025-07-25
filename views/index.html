@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>M.C. Wolmarans</title>
+  <title>M.C. Wolmarans - Digital Chronicles</title>
 
 <script>
   (function () {
@@ -14,11 +14,9 @@
   })();
 </script>
 
+  <!-- Google Fonts for Vintage Book Style -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet" />
   <script defer src="javascripts/validator.js"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
@@ -33,218 +31,366 @@
 </head>
 <body>
 <div id="book">
+    <!-- Book Cover -->
     <div class="cover">
-        <h1>Digital Chronicles:<br>Crafting My Path<br>in Software Development</h1>
-        <p>By M.C. Wolmarans</p>
+        <div class="cover-content">
+            <h1>Digital Chronicles</h1>
+            <div class="subtitle">Crafting My Path in Software Development</div>
+            <div class="author">By M.C. Wolmarans</div>
+            <div class="cover-decoration">❦</div>
+        </div>
         <span id="submission-message" class="submission-message"></span>
     </div>
 
-<div class="page odd content-pages index-page" id="index">
-  <div class="data">
-    <div class="index-container">
-      <h2>Index</h2>
-      <ul>
-        <li><a href="#" onclick="navigateTo('prologue')">Prologue - My Why</a></li>
-        <li><a href="#" class="index-link" data-section="intro-photo-cv">Meet Me & CV</a></li>
-        <li><a href="#" class="index-link" data-section="origin">Beginnings</a></li>
-        <li><a href="#" class="index-link" data-section="growth">The Student Chapter</a></li>
-        <li><a href="#" class="index-link" data-section="skills">Skills & Tools</a></li>
-        <li><a href="#" class="index-link" data-section="chapter1">Chapter 1: Portfolio Digital Book</a></li>
-        <li><a href="#" class="index-link" data-section="chapter2">Chapter 2: MCC Limpopo Website</a></li>
-        <li><a href="#" class="index-link" data-section="chapter3">Chapter 3: Wellness Management App</a></li>
-        <li><a href="#" class="index-link" data-section="chapter4">Chapter 4: TheologyLens</a></li>
-        <li><a href="#" class="index-link" data-section="tutor">Teaching & Tutoring</a></li>
-        <li><a href="#" class="index-link" data-section="contact">Epilogue - Contact</a></li>
-        <li><a href="#" class="index-link" data-section="connect">Connect With Me</a></li>
-      </ul>
+    <!-- Index Page -->
+    <div class="page odd content-pages index-page" id="index">
+        <div class="data">
+            <div class="page-header">
+                <h2>Table of Contents</h2>
+            </div>
+            <div class="index-container">
+                <ul class="index-list">
+                    <li><a href="#" onclick="navigateTo('prologue')"><span class="chapter-num">I.</span> Prologue: My Why</a></li>
+                    <li><a href="#" class="index-link" data-section="intro-photo-cv"><span class="chapter-num">II.</span> Meet the Author</a></li>
+                    <li><a href="#" class="index-link" data-section="origin"><span class="chapter-num">III.</span> Origins & Beginnings</a></li>
+                    <li><a href="#" class="index-link" data-section="growth"><span class="chapter-num">IV.</span> The Student Chapter</a></li>
+                    <li><a href="#" class="index-link" data-section="skills"><span class="chapter-num">V.</span> Skills & Mastery</a></li>
+                    <li><a href="#" class="index-link" data-section="chapter1"><span class="chapter-num">VI.</span> Portfolio Digital Book</a></li>
+                    <li><a href="#" class="index-link" data-section="chapter2"><span class="chapter-num">VII.</span> MCC Limpopo Website</a></li>
+                    <li><a href="#" class="index-link" data-section="chapter3"><span class="chapter-num">VIII.</span> TheologyLens Project</a></li>
+                    <li><a href="#" class="index-link" data-section="tutor"><span class="chapter-num">IX.</span> Teaching & Mentoring</a></li>
+                    <li><a href="#" class="index-link" data-section="contact"><span class="chapter-num">X.</span> Epilogue: Contact</a></li>
+                    <li><a href="#" class="index-link" data-section="connect"><span class="chapter-num">XI.</span> Connect With Me</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-
+    <!-- Prologue -->
     <div class="page even content-pages" id="page-2" data-section="prologue">
         <div class="data">
-            <h2>Prologue – My Why</h2>
-            <p>Some journeys begin with a road map. Mine began with a question: <em>How does the digital world really work?</em> I didn’t want to just use software—I wanted to understand its heartbeat, its mechanics, its logic. What began as childlike wonder slowly grew into a mission: to build, to solve, and to contribute.</p>
-            <p>This story is not a linear checklist of skills—it’s a layered process of growth, shaped by late nights of coding, moments of clarity during tutoring sessions, and a growing sense of calling. Technology, to me, is a tool. Purpose is the goal.</p>
+            <div class="page-header">
+                <h2>Prologue</h2>
+                <div class="chapter-subtitle">My Why</div>
+            </div>
+            <div class="page-content">
+                <div class="drop-cap-paragraph">
+                    <span class="drop-cap">S</span>ome journeys begin with a roadmap. Mine began with a question: <em>How does the digital world truly work?</em> I didn't want to merely use software, I wanted to understand its heartbeat, its mechanics, its very soul.
+                </div>
+                <p>What began as childlike wonder slowly grew into a mission: to build, to solve, and to contribute meaningfully to the world through code.</p>
+                <div class="quote-block">
+                    <em>"He who has a why to live can bear almost any how." (Friedrich Nietzsche)</em>
+                </div>
+                <p>This chronicle is not a linear checklist of achievements, it's a layered tale of growth, shaped by late nights of coding, moments of clarity during tutoring sessions, and an ever-growing sense of purpose.</p>
+                <div class="closing-thought">
+                    <em>Technology, to me, is but a tool. Purpose is the eternal goal.</em>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- Meet the Author -->
     <div class="page odd content-pages" id="page-2b" data-section="intro-photo-cv">
-        <div class="data" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <h2>Meet Me</h2>
-            <img src="images/banner.png" alt="M.C. Wolmarans" style="width: 160px; height: auto; border-radius: 8px; margin-bottom: 15px;" />
-            <p>Hi, I'm MC. Here's a face to the name behind the story. If you'd like a deeper look into my background, feel free to download my full CV below.</p>
-            <a href="downloads/Martinus_Wolmarans_CV.pdf" class="cv-button" download>Download My CV</a>
+        <div class="data author-page">
+            <div class="page-header">
+                <h2>Meet the Author</h2>
+            </div>
+            <div class="author-content">
+                <div class="author-image-container">
+                    <img src="images/profile-photo.jpeg" alt="M.C. Wolmarans" class="author-portrait" />
+                    <div class="image-caption">M.C. Wolmarans</div>
+                </div>
+                <div class="author-intro">
+                    <p>Greetings, dear reader. I am MC, a name that represents not just identity, but intention. Behind this portfolio lies countless hours of dedication, learning, and an unwavering commitment to craft.</p>
+                    <p>Should you wish to delve deeper into my academic and professional background, I invite you to peruse my complete curriculum vitae.</p>
+                </div>
+                <div class="cv-download-section">
+                    <a href="downloads/Martinus Christoffel Wolmarans CV.pdf" class="cv-button" download>
+                        <i class="fas fa-download"></i> Download Complete CV
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- Origins -->
     <div class="page even content-pages" id="page-3" data-section="origin">
         <div class="data">
-            <h2>Beginnings</h2>
-            <p>I grew up in Pretoria, South Africa, where wires, remote controls, and motherboards became my playground. I was that kid—the one taking apart gadgets not to destroy, but to decode their secrets. That hands-on curiosity led me to HTS John Vorster, where maths and physical sciences became my foundation stones.</p>
-            <p>I didn’t just study—I thrived. Graduating as valedictorian with six distinctions wasn’t just a title, but a testimony to countless hours of discovery, problem-solving, and persistence. I wasn’t chasing marks—I was chasing meaning. And in those early years, I found it through logic, patterns, and the magic of engineering principles.</p>
+            <div class="page-header">
+                <h2>Chapter I</h2>
+                <div class="chapter-subtitle">Origins & Beginnings</div>
+            </div>
+            <div class="page-content">
+                <div class="drop-cap-paragraph">
+                    <span class="drop-cap">I</span> grew up in Pretoria, South Africa, where wires, remote controls, and motherboards became my playground. I was that curious child, the one dismantling gadgets not to destroy, but to decode their secrets.
+                </div>
+                <p>That hands-on curiosity led me to HTS John Vorster, where mathematics and physical sciences became my foundation stones. Here, logic transformed from abstract concept to living language.</p>
+                <p>I didn't merely study, I thrived. Graduating as valedictorian with six distinctions wasn't just an accolade, but testimony to countless hours of discovery and persistence.</p>
+                <div class="quote-block">
+                    <em>"I wasn't chasing marks, I was chasing meaning. And in those formative years, I found it through logic, patterns, and the elegant magic of engineering principles."</em>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- Student Chapter -->
     <div class="page odd content-pages" id="page-4" data-section="growth">
         <div class="data">
-            <h2>The Student Chapter</h2>
-            <p>At Belgium Campus, I stepped into an entirely new arena—one that demanded not only theoretical sharpness, but practical creativity. With every module, I moved from curiosity to competence. C#, Python, JavaScript—they became tools in my toolkit. And more recently, Java, JSP, Servlets, and even Swing broadened the horizon.</p>
-            <p>By my second year, I didn’t just consume knowledge—I shared it. I began tutoring fellow students in web development, databases, and software principles. Helping others helped me, too. It clarified my thinking, deepened my empathy, and reinforced one truth: that education is a cycle of giving and growing.</p>
-            <p>Now, as a third-year student preparing for my final stretch, I am looking ahead—with intention. I’m seeking an internship opportunity that will allow me to apply what I’ve learned, challenge what I think I know, and contribute meaningfully to a real-world team. I’m not just looking to work—I’m looking to serve, grow, and leave a mark.</p>
+            <div class="page-header">
+                <h2>Chapter II</h2>
+                <div class="chapter-subtitle">The Student Chapter</div>
+            </div>
+            <div class="page-content">
+                <div class="drop-cap-paragraph">
+                    <span class="drop-cap">A</span>t Belgium Campus, I stepped into an entirely new arena, one demanding not only theoretical sharpness, but practical creativity. With each module, I evolved from curious observer to competent creator.
+                </div>
+                <p>C#, Python, JavaScript: they became instruments in my digital orchestra. More recently, Java, JSP, Servlets, and Swing have broadened my creative horizon.</p>
+                <p>By my second year, I had transformed from knowledge consumer to knowledge curator. I began tutoring fellow students in web development, databases, and software principles.</p>
+                <div class="insight-box">
+                    <p><strong>Teaching taught me this truth:</strong> Education is a sacred cycle of giving and growing, where helping others ultimately helps oneself.</p>
+                </div>
+                <p>Now, as a third-year student preparing for the final stretch, I look ahead with clear intention, seeking an internship opportunity to apply my knowledge, challenge my assumptions, and contribute meaningfully to a real-world team.</p>
+            </div>
         </div>
     </div>
 
+    <!-- Skills & Tools -->
     <div class="page even content-pages" id="page-5" data-section="skills">
         <div class="data">
-            <h2>Skills & Tools</h2>
-            <ul>
-                <li><strong>Languages:</strong> C#, Python, JavaScript, Java (Servlets, JSP, Swing), SQL</li>
-                <li><strong>Frameworks:</strong> .NET, ASP.NET MVC, Node.js, Express.js, Entity Framework</li>
-                <li><strong>Databases:</strong> SQL Server, MongoDB, Microsoft Access</li>
-                <li><strong>Current Focus:</strong> Learning React, advancing full-stack fluency, solidifying OOP design</li>
-                <li><strong>Other Interests:</strong> 3D Printing, Arduino prototyping, personal software ventures</li>
-            </ul>
+            <div class="page-header">
+                <h2>Chapter III</h2>
+                <div class="chapter-subtitle">Skills & Mastery</div>
+            </div>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-list">C#, Python, JavaScript, Java (Servlets, JSP, Swing), SQL</div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Frameworks & Technologies</h3>
+                    <div class="skill-list">.NET, ASP.NET MVC, Node.js, Express.js, Entity Framework</div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Database Systems</h3>
+                    <div class="skill-list">SQL Server, MongoDB, Microsoft Access</div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Current Pursuits</h3>
+                    <div class="skill-list">React mastery, Full-stack fluency</div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Personal Interests</h3>
+                    <div class="skill-list">3D Printing, Arduino prototyping, Personal software ventures</div>
+                </div>
+            </div>
         </div>
     </div>
 
-
-
-
-
-
-
-<!-- Chapter 1: Portfolio Digital Book -->
-<div class="page odd content-pages" id="page-6" data-section="chapter1">
-  <div class="data">
-    <h2>Chapter 1: Portfolio Digital Book</h2>
-    <p>This portfolio itself is a chapter in my story. What you’re flipping through isn’t just a website—it’s a crafted artifact. Designed as an interactive book using Turn.js, it combines storytelling with code, demonstrating how I build not just function, but experience.</p>
-    <p>From the layout to the navigation, I wanted every detail to feel intentional—because building with care is at the core of my approach.</p>
-    <div class="project-links">
-      <a href="https://github.com/Mc141/portfolio-book" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </div>
-  </div>
-</div>
-
-<!-- Chapter 2: MCC Limpopo Website -->
-<div class="page even content-pages" id="page-7" data-section="chapter2">
-  <div class="data">
-    <h2>Chapter 2: MCC Limpopo Website</h2>
-    <img src="images/banner.png" alt="MCC Limpopo Website screenshot" class="project-image"/>
-    <p>This wasn’t just a web build—it was a business transformation. MCC Limpopo needed a digital presence that reflected their credibility. I built a custom site that presents their industrial offerings with clarity and structure.</p>
-    <p>It challenged me to think like both a developer and a user—designing for access, hierarchy, and reliability.</p>
-    <div class="project-links">
-      <a href="https://github.com/Mc141/MCC-revamp" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://mc141.github.io/MCC-revamp/" target="_blank" rel="noopener noreferrer">Live Site</a>
-    </div>
-  </div>
-</div>
-
-<!-- Chapter 3: Wellness Management App -->
-<div class="page odd content-pages" id="page-8" data-section="chapter3">
-  <div class="data">
-    <h2>Chapter 3: Wellness Management App</h2>
-    <img src="images/banner.png" alt="Wellness Management Desktop Application screenshot" class="project-image"/>
-    <p>Built with Java Swing and JavaDB, this desktop app simulates a wellness center’s internal operations—appointments, client feedback, counselor management, and more. It taught me to balance code structure with usability.</p>
-    <ul>
-      <li>Built using MVC architecture and clean Java OOP principles</li>
-      <li>Fully interactive GUI with search, confirmation, and data validation</li>
-      <li>Local JavaDB database for persistence and retrieval</li>
-    </ul>
-    <div class="project-links">
-      <a href="https://github.com/Mc141/wellness-management-app" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </div>
-  </div>
-</div>
-
-<!-- Chapter 4: TheologyLens -->
-<div class="page even content-pages" id="page-9" data-section="chapter4">
-  <div class="data">
-    <h2>Chapter 4: TheologyLens – AI Meets Scripture</h2>
-    <img src="images/banner.png" alt="TheologyLens screenshot" class="project-image" />
-    <p>TheologyLens is a unique project where artificial intelligence meets deep questions. It lets users ask scripture-related questions and returns meaningful passages—not by keyword, but by meaning.</p>
-    <ul>
-      <li>Built with SentenceTransformer & FAISS for vector-based semantic search</li>
-      <li>Backend in Flask (Python), with a modular front end in React</li>
-      <li>Clustered passages reveal themes and relationships across scripture</li>
-    </ul>
-    <div class="project-links">
-      <a href="https://github.com/Mc141/theologylens" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://theologylens.com" target="_blank" rel="noopener noreferrer">Live Site (Coming Soon)</a>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-    <div class="page odd content-pages" id="page-10" data-section="tutor">
+    <!-- Portfolio Digital Book Project -->
+    <div class="page odd content-pages" id="page-6" data-section="chapter1">
         <div class="data">
-            <h2>Teaching & Tutoring</h2>
-            <p>In 2023, I started tutoring high school learners in Mathematics and Physical Sciences at Meta Centre. What began as an opportunity to support others quickly became a passion for teaching and mentoring.</p>
-            <p>In 2024, I transitioned into tutoring at Belgium Campus, helping peers in areas like programming, databases, and web development. Tutoring grounded me in the principle that real learning happens when we teach, and that knowledge shared is knowledge deepened.</p>
+            <div class="page-header">
+                <h2>Chapter IV</h2>
+                <div class="chapter-subtitle">Portfolio Digital Book</div>
+            </div>
+            <div class="page-content">
+                <div class="drop-cap-paragraph">
+                    <span class="drop-cap">T</span>his very portfolio represents a chapter in my evolving story. What you're experiencing isn't merely a website, it's a crafted digital artifact.
+                </div>
+                <p>Designed as an interactive book using Turn.js, it marries storytelling with code, demonstrating my philosophy: that we should build not just function, but meaningful experiences.</p>
+                <p>Every detail, from the vintage typography to the page-turning animations, was deliberately chosen to create an immersive journey through my professional narrative.</p>
+                <div class="project-links-section">
+                    <h4>Project Resources</h4>
+                    <div class="project-links">
+                        <a href="https://github.com/Mc141/Book-portfolio" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-   
-<div class="page even content-pages" id="page-11" data-section="contact">
-  <div class="data contact-form" style="max-height: 100%; overflow-y: auto; padding-right: 10px;">
-    <h2 style="margin-bottom: 0.5rem;">Epilogue – Contact Me</h2>
-    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
-      If you’ve followed this story and it resonates with you, or if you’d like to explore opportunities to collaborate or connect, I’d love to hear from you. Every new chapter begins with a conversation.
-    </p>
-
-    <form id="contact-form" action="/contact" method="POST" style="font-size: 0.9rem;">
-      <label for="first-name">First Name:</label>
-      <input type="text" id="first-name" name="first-name" />
-      <span class="error-message"></span>
-
-      <label for="last-name">Last Name:</label>
-      <input type="text" id="last-name" name="last-name" />
-      <span class="error-message"></span>
-
-      <label for="email">Email:</label>
-      <input type="text" id="email" name="email" />
-      <span class="error-message"></span>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="3"></textarea>
-      <span class="error-message"></span>
-
-      <div id="form-message" style="margin-top: 0.5rem;"></div>
-
-      <button id="submit-button" type="submit" style="margin-top: 0.5rem;">Send</button>
-    </form>
-  </div>
-</div>
-
-    <div class="page odd content-pages" id="page-12" data-section="connect">
+    <!-- MCC Limpopo Website -->
+    <div class="page even content-pages" id="page-7" data-section="chapter2">
         <div class="data">
-            <h2>Connect With Me</h2>
-            <p>I believe the best projects come from genuine collaboration. Feel free to reach out via email, LinkedIn, GitHub, or any of the channels below.</p>
+            <div class="page-header">
+                <h2>Chapter V</h2>
+                <div class="chapter-subtitle">MCC Limpopo Website</div>
+            </div>
+            <div class="page-content">
+                <div class="project-showcase">
+                    <img src="images/mcc.png" alt="MCC Limpopo Website" class="project-image"/>
+                </div>
+                <div class="drop-cap-paragraph">
+                    <span class="drop-cap">T</span>his project transcended mere web development, it was a complete business transformation. MCC Limpopo required a digital presence that truly reflected their industrial credibility.
+                </div>
+                <p>The challenge demanded thinking like both developer and user, designing for accessibility, hierarchy, and unwavering reliability. The result speaks to the power of thoughtful digital craftsmanship.</p>
+                <div class="project-links-section">
+                    <h4>Project Resources</h4>
+                    <div class="project-links">
+                        <a href="https://github.com/Mc141/MCC-revamp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                        <a href="https://mc141.github.io/MCC-revamp/" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Live Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- TheologyLens Project -->
+    <div class="page odd content-pages" id="page-8" data-section="chapter3">
+        <div class="data">
+            <div class="page-header">
+                <h2>Chapter VI</h2>
+                <div class="chapter-subtitle">TheologyLens: AI Meets Scripture</div>
+            </div>
+            <div class="page-content">
+                <div class="project-showcase">
+                    <img src="images/theologylens.png" alt="TheologyLens Interface" class="project-image"/>
+                </div>
+                <div class="drop-cap-paragraph">
+                    <span class="drop-cap">T</span>heologyLens represents a unique convergence where artificial intelligence meets profound spiritual inquiry. This system allows users to pose scripture-related questions and receive meaningful passages, not through mere keyword matching, but through semantic understanding.
+                </div>
+                <div class="tech-highlights">
+                    <h4>Technical Architecture</h4>
+                    <ul class="tech-list">
+                        <li>SentenceTransformer & FAISS for vector-based semantic search</li>
+                        <li>Flask backend (Python) with modular React frontend</li>
+                        <li>Clustered passages revealing thematic relationships</li>
+                    </ul>
+                </div>
+                <div class="project-links-section">
+                    <div class="project-links">
+                        <a href="https://github.com/Mc141/theologylens" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                        <a href="#" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Live Site (Coming Soon)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            
-            <div class="social-media">
-                <a href="https://wa.me/0812471255" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:mcwolmarans141@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/Mc141" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mcwolmarans" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/mc_wolmarans" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <!-- Teaching & Tutoring -->
+    <div class="page even content-pages" id="page-9" data-section="tutor">
+        <div class="data">
+            <div class="page-header">
+                <h2>Chapter VII</h2>
+                <div class="chapter-subtitle">Teaching & Mentoring</div>
+            </div>
+            <div class="page-content">
+                <div class="drop-cap-paragraph">
+                    <span class="drop-cap">I</span>n 2023, I embarked upon tutoring high school learners in Mathematics and Physical Sciences at Meta Centre. What began as an opportunity to support others quickly blossomed into a genuine passion for teaching and mentorship.
+                </div>
+                <p>By 2024, I had transitioned to tutoring at Belgium Campus, helping peers navigate the complexities of programming, databases, and web development principles.</p>
+                <div class="wisdom-box">
+                    <h4>Teaching Philosophy</h4>
+                    <p><em>Tutoring grounded me in this fundamental principle: real learning happens when we teach, and knowledge shared becomes knowledge deepened. Every student taught teaches the teacher in return.</em></p>
+                </div>
+                <p>This experience has reinforced my belief that education is not a one-way street, but a collaborative journey of mutual discovery and growth.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div class="page odd content-pages" id="page-10" data-section="contact">
+        <div class="data contact-form">
+            <div class="page-header">
+                <h2>Epilogue</h2>
+                <div class="chapter-subtitle">Begin Our Conversation</div>
+            </div>
+            <div class="contact-intro">
+                <p>If this chronicle has resonated with your vision, or if you'd like to explore opportunities for collaboration, I would be honored to hear from you. Every meaningful chapter begins with a thoughtful conversation.</p>
+            </div>
+
+            <form id="contact-form" action="/contact" method="POST" class="vintage-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" />
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" />
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email" />
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Share your thoughts, opportunities, or questions..."></textarea>
+                    <span class="error-message"></span>
+                </div>
+
+                <div id="form-message"></div>
+
+                <button id="submit-button" type="submit" class="send-button">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Connect Page -->
+    <div class="page even content-pages" id="page-11" data-section="connect">
+        <div class="data">
+            <div class="page-header">
+                <h2>Final Chapter</h2>
+                <div class="chapter-subtitle">Connect & Collaborate</div>
+            </div>
+            <div class="page-content">
+                <div class="drop-cap-paragraph">
+                    <span class="drop-cap">I</span> believe the finest projects emerge from genuine collaboration and shared vision. Whether you seek to discuss opportunities, share insights, or simply connect with a fellow craftsman of code, I welcome your correspondence.
+                </div>
+                
+                <div class="connection-methods">
+                    <h4>Ways to Connect</h4>
+                    <p>Choose your preferred method of communication from the channels below.</p>
+                </div>
+
+                <div class="social-media">
+                    <a href="mailto:mcwolmarans141@gmail.com" aria-label="Email" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                     <a href="https://www.linkedin.com/in/martinus-christoffel-wolmarans-57500b238/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Mc141" target="_blank" aria-label="GitHub" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+
+                <div class="closing-message">
+                    <em>"The best stories are written in collaboration. Let us craft something meaningful together."</em>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Navigation Controls -->
 <div class="navigation-controls">
     <div class="navigation-buttons">
         <button id="firstPage" title="First Page"><i class="fas fa-angle-double-left"></i></button>
         <button id="prevPage" title="Previous Page"><i class="fas fa-angle-left"></i></button>
     </div>
-
 
     <div class="progress-container">
         <div id="progressBar"></div>
@@ -254,9 +400,7 @@
         <button id="nextPage" title="Next Page"><i class="fas fa-angle-right"></i></button>
         <button id="lastPage" title="Last Page"><i class="fas fa-angle-double-right"></i></button>
     </div>
-
 </div>
-
 
 </body>
 </html>
