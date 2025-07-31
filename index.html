@@ -9,7 +9,7 @@
   (function () {
     if (window.matchMedia("(max-width: 850px)").matches) {
       // Redirect users with screen width 850px or less
-      window.location.href = "https://mobile-portfoli.netlify.app";
+      window.location.href = "https://m.mcwolmarans.co.za";
     }
   })();
 </script>
@@ -22,12 +22,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 
   <!-- jQuery & Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script defer src="javascripts/turn.js"></script>
-  <script defer src="javascripts/indexPaging.js"></script>
+  <script defer src="/javascripts/turn.js"></script>
+  <script defer src="/javascripts/indexPaging.js"></script>
 </head>
 <body>
 <div id="book">
@@ -313,7 +313,7 @@
                 <p>If this chronicle has resonated with your vision, or if you'd like to explore opportunities for collaboration, I would be honored to hear from you. Every meaningful chapter begins with a thoughtful conversation.</p>
             </div>
 
-            <form id="contact-form" action="/contact" method="POST" class="vintage-form">
+            <form id="contact-form" method="POST" class="vintage-form" netlify>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="first-name">First Name</label>

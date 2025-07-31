@@ -12,25 +12,25 @@
 
 ## Features
 
-- **Interactive Page-Turning Interface** powered by Turn.js
-- **Responsive Design** with automatic mobile detection and redirection
-- **Full-Stack Contact Form** with Node.js/Express backend
-- **Downloadable CV** in PDF format
-- **Chaptered Portfolio Layout** for intuitive navigation
-- **Project Showcase** with live demos and GitHub repositories
-- **Vintage Book Aesthetic** with modern web technologies
+- **Interactive Page-Turning Interface** powered by Turn.js  
+- **Responsive Design** with automatic mobile detection and redirection  
+- **Serverless Contact Form** using Netlify Forms  
+- **Downloadable CV** in PDF format  
+- **Chaptered Portfolio Layout** for intuitive navigation  
+- **Project Showcase** with live demos and GitHub repositories  
+- **Vintage Book Aesthetic** with modern web technologies  
 
 ---
 
 ## Tech Stack
 
 ### Frontend
-- **Core:** HTML5, CSS3, Vanilla JavaScript
-- **Libraries:** jQuery, Turn.js
-- **UI:** Font Awesome icons, Google Fonts
-- **Validation:** Custom client-side form validation
+
+- **Core:** HTML5, CSS3, Vanilla JavaScript  
+- **Libraries:** jQuery, Turn.js  
+- **UI:** Font Awesome icons, Google Fonts  
+- **Validation:** Custom client-side form validation  
 
 ### Backend
-- **Runtime:** Node.js
-- **Framework:** Express.js
-- **Features:** RESTful API, form handling, extensible architecture
+
+- **Hosting & Forms:** Netlify (Static Hosting + Netlify Forms)
